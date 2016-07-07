@@ -1,3 +1,18 @@
 @import "utilities";
 @import "footer";
 @import "navbar";
+
+#creation-modal {
+
+  background-color: white;
+  height: 30vh;
+  border-radius: 10px;
+}
+
+
+.modal-wrapper {
+  display: flex;
+  text-align: justify;
+  justify-content: space-around;
+  align-items: center;
+}

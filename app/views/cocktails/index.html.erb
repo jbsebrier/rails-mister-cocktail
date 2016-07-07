@@ -8,4 +8,14 @@
   <% end %>
 </ul>
 
-<%= link_to "Add a cocktail", new_cocktail_path %>
+<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#creation-modal">Add a cocktail</button>
+
+
+<div class="modal-wrapper">
+  <div class="modal fade text-center col-sm-6 offset-3"  id="creation-modal">
+    <%= simple_form_for (@cocktail) do |f| %>
+      <%= f.input :name %>
+      <%= f.button :submit %>
+    <% end %>
+  </div>
+</div>

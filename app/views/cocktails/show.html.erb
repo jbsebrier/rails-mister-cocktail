@@ -11,6 +11,24 @@
 </ul>
 
 
-<%= link_to "add an ingredient", new_cocktail_dose_path(@cocktail) %>
+<h3>Add an ingredient:</h3>
+
+<div class="wrapper">
+  <div class="row">
+    <div class="col-sm-4">
+      <div class="form-group">
+        <%= simple_form_for [@cocktail, @dose] do |f| %>
+          <%= f.input :description %>
+          <%= f.input :ingredient, collection: @ingredients_list %>
+          <%= f.button :submit %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
 
 <%= link_to "Back to cocktail list", cocktails_path %>

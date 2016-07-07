@@ -1,4 +1,10 @@
-<%= simple_form_for (@cocktail) do |f| %>
-  <%= f.input :name %>
-  <%= f.button :submit %>
-<% end %>
+<div class="wrapper">
+  <div class="col-sm-6">
+    <div class="form-group">
+      <%= simple_form_for (@cocktail) do |f| %>
+        <%= f.input :name %>
+        <%= f.button :submit %>
+      <% end %>
+    </div>
+  </div>
+</div>

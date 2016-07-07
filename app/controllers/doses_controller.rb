@@ -4,6 +4,11 @@ before_action :assign_cocktail, only: [ :new, :create, :destroy ]
 
 def new
   @dose = Dose.new
+  @ingredients_list = []
+  @ingredients = Ingredient.all
+  @ingredients.each do |ingredient|
+    @ingredients_list << ingredient.name
+  end
 end
 
 

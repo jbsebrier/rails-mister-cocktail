@@ -2,11 +2,18 @@ class CocktailsController < ApplicationController
 
 def index
 @cocktails = Cocktail.all
+@cocktail = Cocktail.new
 end
 
 def show
   @cocktail = Cocktail.find(params[:id])
   @doses = @cocktail.doses
+  @ingredients_list = []
+  @ingredients = Ingredient.all
+  @ingredients.each do |ingredient|
+    @ingredients_list << ingredient.name
+  end
+  @dose = Dose.new
 end
 
 def new
