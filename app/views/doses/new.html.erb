@@ -3,8 +3,9 @@
   <div class="col-sm-6">
     <div class="form-group">
       <%= simple_form_for [@cocktail, @dose] do |f| %>
+        <%= f.error_notification %>
         <%= f.input :description %>
-        <%= f.input :ingredient, collection: @ingredients_list %>
+        <%= f.input :ingredient_id, collection: Ingredient.all %>
         <%= f.button :submit %>
       <% end %>
     </div>

@@ -14,6 +14,7 @@
 <div class="modal-wrapper">
   <div class="modal fade text-center col-sm-6 offset-3"  id="creation-modal">
     <%= simple_form_for (@cocktail) do |f| %>
+      <%= f.error_notification %>
       <%= f.input :name %>
       <%= f.button :submit %>
     <% end %>

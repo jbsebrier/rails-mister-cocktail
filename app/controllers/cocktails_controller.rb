@@ -21,13 +21,12 @@ def new
 end
 
 def create
-  if Cocktail.new(cocktail_params).valid? == true
+    @cocktails = Cocktail.all
     @cocktail = Cocktail.new(cocktail_params)
-    @cocktail.save
+  if @cocktail.save
     redirect_to cocktail_path(@cocktail)
   else
-    @cocktail = Cocktail.new(cocktail_params)
-    render :new
+    render :index
   end
 
 
